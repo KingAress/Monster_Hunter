@@ -222,6 +222,10 @@ def makeSave():
         "healer_found": NPCClass.the_healer.found,
         "wizard_pos": NPCClass.the_wizard.position,
         "wizard_found": NPCClass.the_wizard.found,
+
+        "blacksmith_pos": NPCClass.the_blacksmith.position,
+        "blacksmith_found": NPCClass.the_blacksmith.found,
+
         # --- Items --- #
         "board_items": ItemClass.on_board_items
     }
@@ -258,10 +262,13 @@ def loadSave():
     # --- NPC --- #
     # Set Found
     NPCClass.the_trader.found = load_dict['trader_found']
+    NPCClass.the_healer.found = load_dict['healer_found']
+    NPCClass.the_blacksmith.found = load_dict['blacksmith_found']
+    NPCClass.the_wizard.found = load_dict['wizard_found']
     # Now the position is updated
     NPCClass.the_trader.position = load_dict['trader_pos']
-
-    NPCClass.the_healer.found = load_dict['healer_found']
+    NPCClass.the_wizard.position = load_dict['wizard_pos']
+    NPCClass.the_blacksmith.position = load_dict['blacksmith_pos']
     NPCClass.the_healer.position = load_dict['healer_pos']
 
     NPCClass.the_wizard.found = load_dict['wizard_found']

@@ -9,12 +9,15 @@ class Item:
         return self.name
 
     def __init__(self, name, i_type, hidden, position, damage, defence, health, dexterity, intelligence, magic,
-                 value, rarity, found):
+                 value, rarity, found, level):
         self.name = name
         self.i_type = i_type
         self.hidden = hidden
         self.position = position
+        self.u_times = 0
+        self.defdamage = damage
         self.damage = damage
+        self.defdefence = defence
         self.defence = defence
         self.health = health
         self.dexterity = dexterity
@@ -23,6 +26,7 @@ class Item:
         self.value = value
         self.rarity = rarity
         self.found = found
+        self.level = level
 
 
 class Spell:
@@ -94,21 +98,21 @@ def unequip():
 
 # name, i_type, hidden, position, damage, defence, health, dexterity, intelligence, magic, value, rarity, found
 # Create normal items
-wooden_stick = Item("Wooden Stick", "Weapon", " ", None, 5, 0, 0, 2, 0, 0, 10, "Normal", False)
-wooden_shield = Item("Wooden Shield", "Shield", " ", None, 0, 5, 0, 2, 0, 0, 10, "Normal", False)
-leather_cap = Item("Leather Cap", "Helmet", " ", gen_ran_pos(), 0, 7, 2, 0, 0, 0, 17, "Normal", False)
-leather_armour = Item("Leather Armour", "Chest", " ", gen_ran_pos(), 0, 12, 2, 0, 0, 0, 28, "Normal", False)
-iron_sword = Item("Iron Sword", "Weapon", " ", None, 25, 0, 0, -1, 0, 0, 120, "Normal", False)
-iron_armour = Item("Iron Armour", "Chest", " ", None, 0, 27, 0, -3, 0, 0, 62, "Normal", False)
-iron_shield = Item("Iron Shield", "Shield", " ", None, 0, 22, 0, -2, 0, 0, 48, "Normal", False)
-iron_helmet = Item("Iron Helmet", "Helmet", " ", None, 0, 17, 0, -1, 0, 0, 32, "Normal", False)
+wooden_stick = Item("Wooden Stick", "Weapon", " ", None, 5, 0, 0, 2, 0, 0, 10, "Normal", False, 0)
+wooden_shield = Item("Wooden Shield", "Shield", " ", None, 0, 5, 0, 2, 0, 0, 10, "Normal", False, 0)
+leather_cap = Item("Leather Cap", "Helmet", " ", gen_ran_pos(), 0, 7, 2, 0, 0, 0, 17, "Normal", False, 0)
+leather_armour = Item("Leather Armour", "Chest", " ", gen_ran_pos(), 0, 12, 2, 0, 0, 0, 28, "Normal", False, 0)
+iron_sword = Item("Iron Sword", "Weapon", " ", None, 25, 0, 0, -1, 0, 0, 120, "Normal", False, 0)
+iron_armour = Item("Iron Armour", "Chest", " ", None, 0, 27, 0, -3, 0, 0, 62, "Normal", False, 0)
+iron_shield = Item("Iron Shield", "Shield", " ", None, 0, 22, 0, -2, 0, 0, 48, "Normal", False, 0)
+iron_helmet = Item("Iron Helmet", "Helmet", " ", None, 0, 17, 0, -1, 0, 0, 32, "Normal", False, 0)
 
 # Create rare items
-dragon_plate = Item("Dragon Plate", "Chest", " ", None, 2, 55, 15, -3, 5, 10, 260, "Rare", False)
-half_moon_katana = Item("Half Moon Katana", "Weapon", " ", None, 60, 3, 0, 6, 6, 6, 280, "Rare", False)
+dragon_plate = Item("Dragon Plate", "Chest", " ", None, 2, 55, 15, -3, 5, 10, 260, "Rare", False, 0)
+half_moon_katana = Item("Half Moon Katana", "Weapon", " ", None, 60, 3, 0, 6, 6, 6, 280, "Rare", False, 0)
 
 # Create unique items
-one_hit_wonder = Item("One Hit Wonder", "Weapon", " ", None, 500, 0, 0, 0, 10, 10, 5000, "Unique", False)
+one_hit_wonder = Item("One Hit Wonder", "Weapon", " ", None, 500, 0, 0, 0, 10, 10, 5000, "Unique", False, 0)
 
 # Item statistics dictionary, hold names, damage, defence and rarity stats for an item
 item_stats = {
