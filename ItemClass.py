@@ -221,6 +221,7 @@ def s_fire_ball(monster):
     print("-------------------------------------------------")
 
 
+# --- Spell Dictionary ---#
 spell_dict = {
     "Fire Ball": s_fire_ball,
 }
