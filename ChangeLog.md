@@ -95,3 +95,5 @@
 * Wizard NPC added. Sells Spells (only 1 for now :( and it's totally over-powered )
 * Placing NPCs on cells without monsters is now simplified with loops
 * Magic statistic is now accounted for when player is in combat. Magic increases damage from spells
+* Blacksmith NPC added. He can upgrade items for a set price. 
+* Items now have a level attribute. Can go from +0 all the way to +10
