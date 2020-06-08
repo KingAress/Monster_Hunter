@@ -2,12 +2,7 @@ import sys
 
 
 class Player:
-    """
-        Player class defines the name, position and whether a player has found the monster.
-        The class also holds an inventory for a player.
-        There are two methods, one which adds an item to the inventory
-        and another which displays the content of the inventory
-    """
+
 
     def __init__(self, name, player, position, hp, strength, defence, dexterity, intelligence, magic, level, xp):
         self.name = name
@@ -28,7 +23,7 @@ class Player:
                                "Weapon": None,
                                "Shield": None
                                }
-        self.gold = 0
+        self.gold = 50000
 
     def levelUp(self):
         new_level = self.xp // 100

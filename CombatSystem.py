@@ -90,7 +90,6 @@ def battle(monster):
                 print("You're dead, game over.")
                 sys.exit()
             else:
-
                 action = input("\nDo you want to [roll], use a [spell] or [flee]? > ")
                 if action == "roll":
                     print("\nIt's your turn to roll the dice... \n")
