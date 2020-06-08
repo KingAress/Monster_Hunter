@@ -1,4 +1,4 @@
-# Monster_Hunter Development Ver 1.8.2
+# Monster_Hunter Ver 1.8.2
 import sys
 import pickle
 
@@ -61,7 +61,6 @@ def menuAction():
             menu_action_dict[menu_action]()
             if menu_action == 'load':
                 gameAction()
-
         else:
             print("Unknown command...")
 
@@ -132,8 +131,8 @@ def npcEncounter():
 
 def checkEncounters():
     # This function checks for any encounters on the board between the player/monster/item.
-
     npcEncounter()
+    
     # All items that are on the board are in the on_board_items list. If player pos == item pos -> find item.
     for i in ItemClass.on_board_items:
         if not i.found:
@@ -164,6 +163,7 @@ def checkEncounters():
                     pass
                 else:
                     print("You stutter something as you run away in fear...")
+
     # If an orc is found, leave a symbol on the board
     for orc in MonsterClass.army_of_orcs:
         if orc.found:
@@ -194,7 +194,6 @@ def checkEncounters():
                 print("You stutter something as you run away in fear...")
     if MonsterClass.orc_boss.found:
         GameBoard.theBoard[MonsterClass.orc_boss.position] = MonsterClass.orc_boss.symbol
-
 
 def makeSave():
     inventory_list = []
@@ -349,4 +348,5 @@ if __name__ == '__main__':
     main()
 
 # Contributions to project:
-# Co-authored-by: torbray <66016078+torbray@users.noreply.github.com>
+# Co-authored-by: https://github.com/torbray
+# Co-authored-by: https://github.com/THultzman

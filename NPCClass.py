@@ -14,7 +14,8 @@ class Npc:
         self.found = found
 
         self.inventory = []
-        self.gold = 1000
+
+        self.gold = 0
 
 
 def tradeItem():
@@ -26,7 +27,6 @@ def tradeItem():
         pass
 
     elif sell_buy == "buy":
-
         print("\nExcellent! Here's what I have:\n")
 
         for attr in sorted(the_trader.inventory, key=lambda obj: obj.rarity):
@@ -52,6 +52,7 @@ def tradeItem():
                 if PC.char.gold >= i.value:
                     PC.char.gold -= i.value
                     PC.char.inventory.append(i)
+
                     print("\nItem added to your inventory.")
                 else:
                     print("\nYou don't have enough gold for that item.")
@@ -93,7 +94,6 @@ def healing():
                 except AttributeError:
                     bonus_hp += 0
             healing_need = (100 - PC.char.hp) + bonus_hp
-
             healing_cost = healing_need / 5
             rounded_cost = round(healing_cost, 2)
             get_healed = input(f"It will cost you {rounded_cost} gold. Deal? [y/n] > ")
@@ -193,7 +193,6 @@ def upgradeItem():
 # Create an NPC
 the_trader = Npc("The Mystical Trader", "T", "Trader", gen_ran_pos(), " ", False)
 the_trader.gold = 1000
-
 the_healer = Npc("The Healer", "H", "Healer", gen_ran_pos(), " ", False)
 
 the_wizard = Npc("The Wizard", "W", "Wizard", gen_ran_pos(), " ", False)
@@ -224,3 +223,4 @@ npc_func_dict = {
     the_wizard: sellSpell,
     the_blacksmith: upgradeItem,
 }
+

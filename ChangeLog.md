@@ -97,3 +97,4 @@
 * Magic statistic is now accounted for when player is in combat. Magic increases damage from spells
 * Blacksmith NPC added. He can upgrade items for a set price. 
 * Items now have a level attribute. Can go from +0 all the way to +10
+

@@ -10,6 +10,7 @@ class Item:
 
     def __init__(self, name, i_type, hidden, position, damage, defence, health, dexterity, intelligence, magic,
                  value, rarity, found, level):
+
         self.name = name
         self.i_type = i_type
         self.hidden = hidden

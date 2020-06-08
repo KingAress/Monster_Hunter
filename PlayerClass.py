@@ -3,8 +3,8 @@ import sys
 
 class Player:
 
-
     def __init__(self, name, player, position, hp, strength, defence, dexterity, intelligence, magic, level, xp):
+
         self.name = name
         self.player = player
         self.position = position
@@ -14,6 +14,7 @@ class Player:
         self.dexterity = dexterity
         self.intelligence = intelligence
         self.magic = magic
+
         self.level = level
         self.xp = xp
 
@@ -23,7 +24,7 @@ class Player:
                                "Weapon": None,
                                "Shield": None
                                }
-        self.gold = 50000
+        self.gold = 0
 
     def levelUp(self):
         new_level = self.xp // 100
@@ -45,6 +46,27 @@ class Player:
                     char.intelligence += 5
                 elif stat == "magic":
                     char.intelligence += 1
+                else:
+                    print("Please pick a valid statistic.")
+                    continue
+                levelup = False
+
+        self.level = new_level
+
+    def levelUp(self):
+        new_level = self.xp // 100
+        if new_level > self.level:
+            levelup = True
+            print("You leveled up!")
+            print("You can level up one of the following: Health/Strength/Defence")
+            while levelup:
+                stat = input("Which will it be? > ").lower()
+                if stat == "health":
+                    char.hp += 5
+                elif stat == "strength":
+                    char.strength += 5
+                elif stat == "defence":
+                    char.defence += 5
                 else:
                     print("Please pick a valid statistic.")
                     continue
@@ -327,5 +349,3 @@ def createCharacter():
 # name, player, position, hp, strength, defence, dexterity, intelligence, magic, level, xp
 
 char = Player("P", " ", 0, 100, 0, 0, 0, 0, 0, 0, 0)
-
-# Co-authored-by: torbray <66016078+torbray@users.noreply.github.com>
