@@ -169,7 +169,7 @@ def upgradeItem():
                         print(f"{obj.name} Lvl: +{obj.level}")  # Displaying the item
                         proceed = input("It will cost you 100 gold, proceed? [y/n] > ")
                         if proceed == 'y':
-                            if PC.char.gold < 100: # Checking if they have enough gold
+                            if PC.char.gold < 100:  # Checking if they have enough gold
                                 print("You don't have enough gold!")
                             else:
                                 obj.level += 1
@@ -190,6 +190,7 @@ def upgradeItem():
             except AttributeError:
                 pass
 
+
 # Create an NPC
 the_trader = Npc("The Mystical Trader", "T", "Trader", gen_ran_pos(), " ", False)
 the_trader.gold = 1000
@@ -198,7 +199,7 @@ the_healer = Npc("The Healer", "H", "Healer", gen_ran_pos(), " ", False)
 
 the_wizard = Npc("The Wizard", "W", "Wizard", gen_ran_pos(), " ", False)
 
-the_blacksmith = Npc("The Blacksmith", "B", "Blacksmith", 1, " ", False)
+the_blacksmith = Npc("The Blacksmith", "S", "Blacksmith", 1, " ", False)
 
 # Give items to an NPC
 # Normal
