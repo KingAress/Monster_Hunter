@@ -301,7 +301,6 @@ def createCharacter():
 
         return the_player, name, race, race_type
 
-
 # name, player, position, hp, strength, defence, dexterity, intelligence, magic, level, xp
 
 char = Player("P", " ", 0, 100, 0, 0, 0, 0, 0, 0, 0)
