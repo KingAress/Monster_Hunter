@@ -3,7 +3,7 @@
 
 You can access the docs here -> https://docs.google.com/document/d/1TzCFe8UJP0mz79BiPob1KEm9D5hsM-e48UUai_JMC6Y/edit?usp=sharing
 
-Please note that the description blow is old and doesn't reflect many features such as NPCs. You can find detailed explanation in the docs above.
+Please note that the description below is old and doesn't reflect many features such as NPCs. You can find detailed explanation in the docs above.
 
 ____
 
