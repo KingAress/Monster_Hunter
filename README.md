@@ -1,6 +1,10 @@
 
 # Monster_Hunter - Master Branch(v1.8.2)
 
+You can access the docs here -> https://docs.google.com/document/d/1TzCFe8UJP0mz79BiPob1KEm9D5hsM-e48UUai_JMC6Y/edit?usp=sharing
+
+Please note that the description blow is old and doesn't reflect many features such as NPCs.
+
 To start the game **_you will need all of the .py files in the same directory._** Then simply open your favourite command terminal and navigate to the directory of the Monster_Hunter.py. Once in the correct directory use:
 
     python Monster_Hunter.py
